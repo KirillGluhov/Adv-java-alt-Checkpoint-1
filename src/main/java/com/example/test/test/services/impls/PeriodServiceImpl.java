@@ -173,7 +173,11 @@ public class PeriodServiceImpl implements PeriodService {
         }
         else
         {
-            Page<Period> periods = periodPageRepository.findAll(Specification.where(equalId(filterAndSorting.getFilter().getId()))
+            Page<Period> periods = periodPageRepository
+                    .findAll(Specification
+                                    .where(equalId(filterAndSorting
+                                            .getFilter()
+                                            .getId()))
                     .and(equalSlotId(filterAndSorting
                             .getFilter()
                             .getSlotId()))

@@ -37,7 +37,7 @@ public class PeriodController
         return periodService.findPeriod(id);
     }
 
-    @GetMapping("/all")
+    @PostMapping("/all")
     public Object readPeriods(
             @RequestBody FilterAndSorting filterAndSorting
     )
